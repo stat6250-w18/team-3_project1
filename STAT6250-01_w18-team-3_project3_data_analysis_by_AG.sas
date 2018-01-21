@@ -1,3 +1,10 @@
+initial-buildout-of-data-prep
+/*
+********************************************************************************
+*/
+data _null_;
+	put "Hello,Les plus grand magician du SAS!";
+
 *******************************************************************************;
 **************** 80-character banner for column width reference ***************;
 * (set window width to banner width to calibrate line length to 80 characters *;
@@ -100,4 +107,5 @@ possible illegal values, and better handle missing data.
 
 proc print noobs data= t20_matcheswhere winner EQ 'balls_remaining';
      var winner;
+     master
 run;
