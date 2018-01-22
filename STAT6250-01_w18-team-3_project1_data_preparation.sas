@@ -8,8 +8,8 @@
 
 [Experimental Units] Over 6000 matches since 2003 
 
-[Number of Observations] 6,417      
-           
+[Number of Observations] 6,417Â  Â  Â Â 
+Â  Â  Â  Â  Â  Â 
 [Number of Features] 26
 
 [Data Source] https://www.kaggle.com/imrankhan17/t20matches/downloads/t20matches.zip
