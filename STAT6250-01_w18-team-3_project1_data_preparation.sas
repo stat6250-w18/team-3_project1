@@ -21,7 +21,7 @@ This data can be downloaded from Kaggle website.
 
 * setup environmental parameters;
 %let inputDatasetURL =
-https://github.com/stat6250/team-3_project1/blob/master/t20_matches.csv
+https://github.com/stat6250/team-3_project1/blob/master/t20_matches.csv?raw=true
 ;
 
 * load raw cricket matches dataset over the wire;
