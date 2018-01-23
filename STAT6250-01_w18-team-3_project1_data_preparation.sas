@@ -19,15 +19,54 @@ This data can be downloaded from Kaggle website.
 
 [Unique ID Schema] The column "match_id" is a primary key.
 
-[Research Question 1] Which team has the highest winning rate? that is number of won matches / total number of matches.
-[Rationale] Find out which team has the highest probability of winning.
+* setup environmental parameters;
+%let inputDatasetURL =
+https://github.com/stat6250/team-3_project1/blob/master/t20_matches.csv
+;
 
-[Research Question 2] What is the winning odds of home against away?
-[Rationale] Does home team have better performance?
+* load raw cricket matches dataset over the wire;
+%macro loadDataIfNotAlreadyAvailable(dsn,url,filetype);
+    %put &=dsn;
+    %put &=url;
+    %put &=filetype;
+    %if
+        %sysfunc(exist(&dsn.)) = 0
+    %then
+        %do;
+            %put Loading dataset &dsn. over the wire now...;
+            filename tempfile "%sysfunc(getoption(work))/tempfile.csv";
+            proc http
+                method="get"
+                url="&url."
+                out=tempfile
+                ;
+            run;
+            proc import
+                file=tempfile
+                out=&dsn.
+                dbms=&filetype.;
+            run;
+            filename tempfile clear;
+        %end;
+    %else
+        %do;
+            %put Dataset &dsn. already exists. Please delete and try again.;
+        %end;
+%mend;
+%loadDataIfNotAlreadyAvailable(
+    matches_raw,
+    &inputDatasetURL.,
+    csv
+)
 
-[Research Question 3] Which 3 team had the most won matches?
-[Rationale] Find out the top 3 teams of 2017.
-
-[Reason for Choice] As a data analyst and sports fan, it is fun to do some analysis on matches like this.
-*/
-
+* check raw dataset for duplicates with primary key;
+proc sort
+        nodupkey
+        data=matches_raw
+        dupout=matches_raw_dups
+        out=_null_
+    ;
+    by
+        match_id
+    ;
+run;
