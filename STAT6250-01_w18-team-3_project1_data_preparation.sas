@@ -2,7 +2,7 @@
 **************** 80-character banner for column width reference ***************;
 * (set window width to banner width to calibrate line length to 80 characters *;
 *******************************************************************************;
-/*
+*
 [Dataset Name] T20 cricket mathces
 
 [Experimental Units] Over 6000 matches since 2003 
@@ -17,7 +17,8 @@ This data can be downloaded from Kaggle website.
 
 [Data Dictionary] https://www.kaggle.com/imrankhan17/t20matches/version/3
 
-[Unique ID Schema] The column "match_id" is a primary key.
+[Unique ID Schema] The column "match_id" is a primary key
+;
 
 * setup environmental parameters;
 %let inputDatasetURL =
