@@ -4,11 +4,11 @@
 *******************************************************************************;
 
 *
-This file uses the following analytic dataset to address several research
-questions regarding free/reduced-price meals at CA public K-12 schools
+This file uses the following analytic data set to address several research questions 
+regarding T20 matches in the Sport of Cricket, specifically in the years 2003-2017.
 
-Dataset Name: FRPM1516_analytic_file created in external file
-STAT6250-02_s17-team-0_project1_data_preparation.sas, which is assumed to be
+Data set name: T20 matches created in external file
+STAT6250-01_team-3_project1_data_preparation.sas, which is assumed to be 
 in the same directory as this file
 
 See included file for dataset properties
@@ -21,7 +21,7 @@ X "cd ""%substr(%sysget(SAS_EXECFILEPATH),1,%eval(%length(%sysget(SAS_EXECFILEPA
 
 
 * load external file that generates analytic dataset FRPM1516_analytic_file;
-%include '.\STAT6250-02_s17-team-0_project1_data_preparation.sas';
+%include '.\STAT6250-01_w18-team-3_project1_data_preparation.sas';
 
 
 
