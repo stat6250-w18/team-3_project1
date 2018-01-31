@@ -20,18 +20,16 @@ See included file for dataset properties
 X "cd ""%substr(%sysget(SAS_EXECFILEPATH),1,%eval(%length(%sysget(SAS_EXECFILEPATH))-%length(%sysget(SAS_EXECFILENAME))))""";
 
 
-* load external file that generates analytic dataset FRPM1516_analytic_file;
+* load external file that generates analytic dataset T20_matches_file;
 %include '.\STAT6250-01_w18-team-3_project1_data_preparation.sas';
 
 
 
-title1
-'Research Question: What are the top twenty districts with the highest mean values of "Percent (%) Eligible FRPM (K-12)"?'
-;
-
-title2
-'Rationale: This should help identify the school districts in the most need of outreach based upon child poverty levels.'
-;
+title1 
+    'Research Question: What is the track record of teams(win/loose/draw) ?';
+    
+title2 
+    'Rationale: Determine the ranking of team based on performance. ';
 
 footnote1
 'Based on the above output, 9 schools have 100% of their students eligible for free/reduced-price meals under the National School Lunch Program.'
@@ -74,12 +72,11 @@ footnote;
 
 
 title1
-'Research Question: How does the distribution of "Percent (%) Eligible FRPM (K-12)" for charter schools compare to that of non-charter schools?'
-;
-
-title2
-'Rationale: This would help inform whether outreach based upon child poverty levels should be provided to charter schools.'
-;
+    'Research Question: What are win/lose statistics for teams batting/bowling first ? ';
+    
+title2  
+    'Rationale: This can help the team to decide to bat/bowl first depending on their track record 
+     and increase their chances of winning.';
 
 footnote1
 'Based on the above output, the distribution of percentage eligible for free/reduced-price meals under the National School Lunch Program appears to be roughly the same for Charter and Non-charter Schools.'
@@ -121,13 +118,12 @@ footnote;
 
 
 
-title1
-'Research Question: Can "Enrollment (K-12)" be used to predict "Percent (%) Eligible FRPM (K-12)"?'
-;
-
-title2
-'Rationale: This would help determine whether outreach based upon child poverty levels should be provided to smaller schools. E.g., if enrollment is highly correlated with FRPM rate, then only larger schools would tend to have high child poverty rates.'
-;
+title1 
+    'Research Question: How many matches were improvised by D/L method (target runs is reduced due to weather and time factors)?';
+     
+title2 
+    'Rationale: Use optimal venues and dates to fix matches so as to avoid sudden changes in weather 
+     resulting in implementation of D/L method ';
 
 footnote1
 "Based on the above output, there's no clear inferential pattern for predicting the percentage eligible for free/reduced-price meals under the National School Lunch Program based on school enrollment since cell counts don't tend to follow trends for increasing or decreasing consistently."
