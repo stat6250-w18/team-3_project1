@@ -24,8 +24,7 @@ title2
 'Rationale: Find out the teams good at winning games.';
     
 footnote1
-'Based on the above output, Chennai Super Ki, Mumbai Indians, Lancashire, 
-Hampshire, Warwickshire are the top 5 teams at winning games';
+'Based on the above output, Chennai Super Ki, Mumbai Indians, Lancashire, Hampshire, Warwickshire are the top 5 teams at winning games';
 
 *
 Methodology: Use PROC FREQ to list out the frequencies of each team's winning
@@ -58,8 +57,7 @@ title2
 'Rationale: Does home team have better performance?';
 
 footnote1
-"Based on the result, home teams are not at advantage winning against 
-guest teams";
+"Based on the result, home teams are not at advantage winning against guest teams";
 
 *
 Methodology: Use SET keyword to create a new data set and a new dummy variable
@@ -86,15 +84,13 @@ footnote;
 
 
 title1 
-'Research Question: Research Question: Which team has the highest winning rate? 
-that is number of won matches / total number of matches.';
+'Research Question: Research Question: Which team has the highest winning rate? that is number of won matches / total number of matches.';
 
 title2 
 'Rationale: Find out which team has the highest probability of winning.';
     
 footnote1
-"Based on the result, Peshawar Region, Zarai Taraqiati, Lahore Lions are the 
-top 3 teams with highest winning rate.";
+"Based on the result, Peshawar Region, Zarai Taraqiati, Lahore Lions are the top 3 teams with highest winning rate.";
 
 *
 Methodology: Use PROC SQL to merge the data and created a new dataset with 
@@ -107,63 +103,6 @@ are abandoned.
 
 Possible Follow-up Steps: There are easier ways to get to the result, try 
 to simplify the code;
-
-*sort by winner;
-proc freq data=match;
-tables winner / out=sort_winner;
-run;
-
-proc sort data=sort_winner;
-    by descending count;
-run;
-
-*sort by home;
-proc freq data=match;
-    tables home / out=sort_home;
-run;
-
-proc sort data=sort_home;
-    by descending count;
-run;
-
-*sort by away;
-proc freq data=match;
-    tables away / out=sort_away;
-run;
-
-
-proc sort data=sort_away;
-    by descending count;
-run;
-
-*==========================================================;
-data new_sort_home(rename=(home=team count=home));
-    set sort_home;
-run;
-
-data new_sort_away(rename=(away=team count=away));
-    set sort_away;
-run;
-
-data new_sort_winner(rename=(winner=team count=winner));
-    set sort_winner;
-run;
-
-* merge home table and away table;
-proc sql;
-     create table total_match as
-     select     L.*, R.*
-     from new_sort_home L
-     inner join  new_sort_away R
-     on L.team=R.team;
-quit;
-
-data home_away; set total_match;
-    total_match = home + away;
-run;
-proc sort data=home_away;
-    by descending total_match;
-run;
 
 * merge the 3rd table (winner) into the merged one from home and away;
 proc sql;
