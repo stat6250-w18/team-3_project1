@@ -86,7 +86,7 @@ footnote3
 ;
 
 *
-Methodology: Compute five-number summaries by charter-school indicator variable
+Methodology: Compute number of wins by counting winner variable outcome for a specific team.
 
 Limitations: This methodology does not account for player ratings and their play statistics 
 over their career.
