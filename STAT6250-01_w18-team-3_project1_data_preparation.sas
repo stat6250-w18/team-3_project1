@@ -18,7 +18,7 @@ https://www.kaggle.com/imrankhan17/t20matches/downloads/t20matches.zip
 
 [Data Dictionary] https://www.kaggle.com/imrankhan17/t20matches/version/3
 
-[Unique ID Schema] The column "match_id" is a primary key
+[Unique ID] The column "match_id" is a primary key
 ;
 
 * setup environmental parameters;
