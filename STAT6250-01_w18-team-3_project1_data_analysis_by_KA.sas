@@ -67,39 +67,36 @@ footnote;
 
 
 title1
-    'Research Question: What are win/lose statistics for teams batting/bowling first ? ';
+    'Research Question: What are win/lose statistics for teams batting/bowling first? ';
     
 title2  
-    'Rationale: This can help the team to decide to bat/bowl first depending on their track record 
-     and increase their chances of winning.';
+    'Rationale: This can help decide the win/loss rate of a team and decide their rankings.';
 
 footnote1
-'Based on the above output, the distribution of percentage eligible for free/reduced-price meals under the National School Lunch Program appears to be roughly the same for Charter and Non-charter Schools.'
+'Based on the calculations, the team can decide whether to bowl/bat first
+ depending on their track record and increase their chances of winning.'
 ;
 
 footnote2
-'However, Charter schools do appear to have slighly lower childhood poverty rates, overall, given the smaller first and second quartiles.'
+'The team can devise a strategy to defeat the opponent based on the choice of play.'
 ;
 
 footnote3
-"In addition, more analysis is needed for the group with value 'N/A', which has a significanly reduced child poverty distribution."
+"In addition, more analysis is needed into the players and their play statistics."
 ;
 
 *
 Methodology: Compute five-number summaries by charter-school indicator variable
 
-Limitations: This methodology does not account for schools with missing data,
-nor does it attempt to validate data in any way, like filtering for percentages
-between 0 and 1.
+Limitations: This methodology does not account for player ratings and their play statistics 
+over their career.
 
-Possible Follow-up Steps: More carefully clean the values of the variable
-Percent_Eligible_FRPM_K12 so that the statistics computed do not include any
-possible illegal values, and better handle missing data, e.g., by using a
-previous year's data or a rolling average of previous years' data as a proxy.
+Possible Follow-up Steps: Check up with players from teams on their career background
+and their present statistics to predict an estimate of match outcome.
 ;
 proc means
         min q1 median q3 max
-        data=FRPM1516_analytic_file
+        data=T20_Matches_analytic_file_temp(obs=20)
     ;
     class
         Charter_School
