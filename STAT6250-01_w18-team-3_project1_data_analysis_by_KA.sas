@@ -26,44 +26,39 @@ X "cd ""%substr(%sysget(SAS_EXECFILEPATH),1,%eval(%length(%sysget(SAS_EXECFILEPA
 
 
 title1 
-    'Research Question: What is the track record of teams(win/loose/draw) ?';
+    'Research Question: Which teams have scored highest? ?';
     
 title2 
-    'Rationale: Determine the ranking of team based on performance. ';
+    'Rationale: This would help determine the ranking of teams in terms of strike rate in matches ';
 
 footnote1
-'Based on the above output, 9 schools have 100% of their students eligible for free/reduced-price meals under the National School Lunch Program.'
-;
+'Based on the above output, most of the teams scoring such high runs have lost a very few wickets in the whole innings.';
 
 footnote2
-'Moreover, we can see that virtually all of the top 20 schools appear to be elementary schools, suggesting increasing early childhood poverty.'
-;
+'Moreover, it is observed that they have played all the overs with none left to spare.';
 
 footnote3
-'Further analysis to look for geographic patterns is clearly warrented, given such high mean percentages of early childhood poverty.'
-;
+'In general, the margin of difference in the win is very large.';
 *
 Methodology: Use PROC PRINT to print just the first twenty observations from
 the temporary dataset created in the corresponding data-prep file.
 
-Limitations: This methodology does not account for districts with missing data,
-nor does it attempt to validate data in any way, like filtering for percentages
-between 0 and 1.
+Limitations: This methodology does not account for consistency of teams scoring
+high every match, they could play very excellent or would score very low and lose 
+the game.
 
-Possible Follow-up Steps: More carefully clean the values of the variable
-Percent_Eligible_FRPM_K12 so that the means computed do not include any possible
-illegal values, and better handle missing data, e.g., by using a previous year's
-data or a rolling average of previous years' data as a proxy.
+Possible Follow-up Steps: Take the average of scores of a team in each and every
+match, and then determine the possible highest score.
 ;
 proc print
         noobs
-        data=FRPM1516_analytic_file_temp(obs=20)
+        data=T20_Matches_analytic_file_temp(obs=20)
     ;
     id
-        District_Name
+        match_id
     ;
     var
-        Percent_Eligible_FRPM_K12
+        innings1_runs
     ;
 run;
 title;
