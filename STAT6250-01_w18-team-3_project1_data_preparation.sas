@@ -61,7 +61,8 @@ https://github.com/stat6250/team-3_project1/blob/master/T20%20Matches.xlsx?raw=t
     xls
 )
 
-* check raw dataset for duplicates with primary key;
+
+* check raw dataset for duplicates with respect to its primary key;
 proc sort
         nodupkey
         data=matches_raw
@@ -77,7 +78,6 @@ run;
 * build analytic dataset from cricket match dataset with the least number of 
 columns and minimal cleaning/transformation needed to address research 
 questions in corresponding data-analysis files;
-
 data matches_analytic_file;
     retain
         home
