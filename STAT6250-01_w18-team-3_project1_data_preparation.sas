@@ -11,9 +11,10 @@
            
 [Number of Features] 26
 
-[Data Source] https://www.kaggle.com/imrankhan17/t20matches/downloads/t20matches.zip
+[Data Source] This data can be downloaded from Kaggle website.
+https://www.kaggle.com/imrankhan17/t20matches/downloads/t20matches.zip
 
-This data can be downloaded from Kaggle website.
+
 
 [Data Dictionary] https://www.kaggle.com/imrankhan17/t20matches/version/3
 
@@ -73,9 +74,10 @@ proc sort
 run;
 
 
-* build analytic dataset from cricket match dataset with the least number of columns and
-minimal cleaning/transformation needed to address research questions in
-corresponding data-analysis files;
+* build analytic dataset from cricket match dataset with the least number of 
+columns and minimal cleaning/transformation needed to address research 
+questions in corresponding data-analysis files;
+
 data matches_analytic_file;
     retain
         home
@@ -123,11 +125,11 @@ proc sort
 run;
 
 
-*===================================================================================
-Use PROC SORT and PROC SQL to create a subset table to include a new variable:      |
-winning rate. which will be used as part of data analysis by LJ.                    |  
-                                                                                    |
-*===================================================================================
+*==============================================================================
+Use PROC SORT and PROC SQL to create a subset table to include a new variable:     
+winning rate. which will be used as part of data analysis by LJ.                  
+                                                                                 
+*==============================================================================
 ;
 *sort by winner;
 proc freq data=match;
