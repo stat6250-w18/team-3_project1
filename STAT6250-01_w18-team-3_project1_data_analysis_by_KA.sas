@@ -99,10 +99,10 @@ proc means
         data=T20_Matches_analytic_file_temp(obs=20)
     ;
     class
-        Charter_School
+        match_details
     ;
     var
-        Percent_Eligible_FRPM_K12
+        winner
     ;
 run;
 title;
