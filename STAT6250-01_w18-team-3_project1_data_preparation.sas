@@ -58,7 +58,7 @@ https://github.com/stat6250/team-3_project1/blob/master/T20%20Matches.xlsx?raw=t
 %loadDataIfNotAlreadyAvailable(
     matches_raw,
     &inputDatasetURL.,
-    xls
+    xlsx
 )
 
 
