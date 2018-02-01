@@ -50,7 +50,7 @@ run;
 title;
 footnote;
 *
-Methodology: Use PROC PRINT to print out the first twenty observations
+Methodology: Use PROC PRINT to print out the top twenty winner observations
 from the sorted home runs temporary dataset created in the data prep file. 
 top 20 winner .
 
