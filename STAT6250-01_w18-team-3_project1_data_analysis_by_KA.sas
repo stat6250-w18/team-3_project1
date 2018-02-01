@@ -34,7 +34,7 @@ title2
 ;
 
 footnote1
-'Based on the above output, most of the teams scoring such high runs have lost a very few wickets in the whole innings.'
+'Based on the output, most of the teams scoring such high runs have lost a very few wickets in the whole innings.'
 ;
 
 footnote2
