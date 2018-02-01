@@ -160,11 +160,11 @@ title2
 ;
 
 footnote1
-'Sorting by this statistic shows a better correlation than between win  and away .'
+'Sorting by this statistic shows a better correlation than between win and away .'
 ;
 
 footnote2
-'Very few teams among the top 20  by win away'
+'Very few teams among the top 20  by win far away from home'
 ;
 *
 Methodology: Use PROC PRINT to print out the first twenty observations
