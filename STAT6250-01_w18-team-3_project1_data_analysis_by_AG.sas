@@ -33,13 +33,13 @@ footnote1
 
 proc print
         noobs
-        data=T20 Matches_analytic_file(obs=20)
+        data = Matches_raw (obs=20)
     ;
-    id
         match_id
-    ;
-    var
-        winner
+     ;
+     
+     var
+          winner
     ;
 run;
 title;
@@ -75,7 +75,7 @@ are.
 
 proc print 
         noobs 
-        data =innings1_runs=(obs=20)
+        data = Matches_raw
     ;
     id 
         match_ID
@@ -120,20 +120,20 @@ Methodolody: Use PROC PRINT to print out the first twenty observations
  from the win_by_run satting average temporary dataset created in the data prep
 file. Then compare the salaries.
 Limitations: None
-Possible Follow-up Steps: Possibly find a correlation between batting average
-and slugging percentage by comparing the top twenty players for each
+Possible Follow-up Steps: Possibly find a correlation betweeninnings1
+and win by runs by comparing for each
 category using PROC SORT.
 ;
 
 proc print 
         noobs 
-        data=Batting_Average_temp(obs=20)
+        data= Matches_raw 
     ;
     id 
-        Player_ID
+        match_ID
     ;
     var 
-        Player_Name Salary Batting_Average
+        innings1 win_by_runs
     ;
 run;
 title;
@@ -143,44 +143,39 @@ footnote;
 
 
 title1
-'Research Question: Who are the top 20 baseball players with the most RBIs?'
+'Research Question: Who are the top 20 teams win away ?'
 ;
 
 title2
-'Rationale: RBIs are how you score in baseball, so the players with more of these should have high salaries.'
+'Rationale: we can see how the team proform outside home.'
 ;
 
 footnote1
-'Sorting by this statistic shows a better correlation than between salary and batting average.'
+'Sorting by this statistic shows a better correlation than between win  and away .'
 ;
 
 footnote2
-'Very few players among the top 20 players by RBI numbers have salaries below 2000. On the contrary, a lot of them have salaries above 4000 and even one reaching 6000. These salaries are way above the average of 1248.53'
+'Very few teams among the top 20  by win away'
 ;
 
-footnote3
-'Home Runs and RBI numbers have a better correlation to higher salaries than batting average.'
 ;
 
 *
 Methodology: Use PROC PRINT to print out the first twenty observations
-from the RBI temporary dataset created in the data prep file. 
-Then compare the salaries.
+from the winner dataset created in the data prep file. 
+Then compare winnig away .
 Limitations: None
-Possible Follow-up Steps: Compare the top twenty players by home runs to the top 
-twenty players by RBIs to see if there is a correlation between home runs 
-and RBIs.
-;
+Possible Follow-up Steps: Compare the top twenty teams win ousaid home;
 
 proc print 
         noobs 
-        data=RBIs_temp(obs=20)
+        data=  Matches_raw (obs=20)
     ;
     id 
-        Player_ID
+        match_ID
     ;
     var 
-        Player_Name Salary RBIs
+        winner away
     ;
 run;
 title;
