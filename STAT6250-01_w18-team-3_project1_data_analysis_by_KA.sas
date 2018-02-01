@@ -124,7 +124,7 @@ footnote;
 
 
 title1 
-'Research Question: How many matches were improvised by D/L method *(target runs and overs are reduced due to weather and time factors);?'
+'Research Question: How many matches were improvised by D/L method *(target runs and overs are reduced due to weather and time factors).;?'
 ;
      
 title2 
