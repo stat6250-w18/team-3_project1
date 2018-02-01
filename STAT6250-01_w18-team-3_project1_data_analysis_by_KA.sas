@@ -132,14 +132,14 @@ title2
     ;
 
 footnote1
-"Based on the data,the team can change its strategy to meet the new target(runs and overs considered) by changing its lineup.';
+'Based on the data,the team can change its strategy to meet the new target(runs and overs considered) by changing its lineup.';
 
 footnote2
 'However, this analysis does not yield complete inference of conditions on application of D/L method. '
 ;
 
 footnote3
-"In addition, more analysis is needed into the players and their play statistics."
+'In addition, more analysis is needed into the players and their play statistics.'
 ;
 *
 Methodology: Use proc print to print the number of teams playing the 
