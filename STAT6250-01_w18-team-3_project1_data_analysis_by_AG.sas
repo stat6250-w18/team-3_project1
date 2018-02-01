@@ -6,9 +6,11 @@
 *
 This file uses the following analytic dataset to address several research
 questions regarding 6000 cricket matches
+
 Dataset Name: T20 cricket mathces created in external file
 STAT6250-01_w18-team-3_project1_data_preparation.sas, which is assumed to be
 in the same directory as this file
+
 See included file for dataset properties
 ;
 
@@ -24,9 +26,12 @@ X "cd ""%substr(%sysget(SAS_EXECFILEPATH),1,%eval(%length(%sysget(SAS_EXECFILEPA
 
 
 title1
-'Research Question: What are the top twenty winners?'
+'Research Question: who are the top twenty teams winner?'
 ;
 
+title2:
+'Rationale : this would help us to plan a match amongst them to find out the the ultimate winner.'
+;
 footnote1
 'This number will be used to help answer the following three research questions regarding the top twenty .'
 ;
@@ -67,7 +72,9 @@ footnote2
 Methodology: Use PROC PRINT to print out the first twenty observations
 from the sorted home runs temporary dataset created in the data prep file. 
 Then compare winner by run.
+
 Limitations: None
+
 Possible Follow-up Steps: Use PROC MEANS to compute the home run average
 for the data set and see just how far above this average the best win by runs 
 are.
@@ -117,9 +124,11 @@ footnote4
 
 *
 Methodolody: Use PROC PRINT to print out the first twenty observations
- from the win_by_run satting average temporary dataset created in the data prep
+from the win_by_run satting average temporary dataset created in the data prep
 file. Then compare the salaries.
+
 Limitations: None
+
 Possible Follow-up Steps: Possibly find a correlation betweeninnings1
 and win by runs by comparing for each
 category using PROC SORT.
@@ -157,14 +166,13 @@ footnote1
 footnote2
 'Very few teams among the top 20  by win away'
 ;
-
-;
-
 *
 Methodology: Use PROC PRINT to print out the first twenty observations
 from the winner dataset created in the data prep file. 
-Then compare winnig away .
+Then compare winnig away.
+
 Limitations: None
+
 Possible Follow-up Steps: Compare the top twenty teams win ousaid home;
 
 proc print 
