@@ -26,12 +26,12 @@ X "cd ""%substr(%sysget(SAS_EXECFILEPATH),1,%eval(%length(%sysget(SAS_EXECFILEPA
 
 
 title1 
-    'Research Question: Which teams have scored highest? ?'
-    ;
+'Research Question: Which teams have scored highest? ?'
+;
     
 title2 
-    'Rationale: This would help determine the ranking of teams in terms of strike rate in matches '
-    ;
+'Rationale: This would help determine the ranking of teams in terms of strike rate in matches '
+;
 
 footnote1
 'Based on the above output, most of the teams scoring such high runs have lost a very few wickets in the whole innings.'
@@ -73,12 +73,12 @@ footnote;
 
 
 title1
-    'Research Question: What are win/lose statistics for teams batting first? '
-    ;
+'Research Question: What are win/lose statistics for teams batting first? '
+;
     
 title2  
-    'Rationale: This can help decide the win/loss rate of a team and decide their rankings.'
-    ;
+'Rationale: This can help decide the win/loss rate of a team and decide their rankings.'
+;
 
 footnote1
 'Based on the calculations, the team can decide whether to bowl/bat first
@@ -124,12 +124,12 @@ footnote;
 
 
 title1 
-    'Research Question: How many matches were improvised by D/L method (target runs and overs are reduced due to weather and time factors)?'
-    ;
+'Research Question: How many matches were improvised by D/L method *(target runs and overs are reduced due to weather and time factors);?'
+;
      
 title2 
-    'Rationale: Use optimal venues and dates to fix matches so as to avoid sudden changes in weather resulting in implementation of D/L method '
-    ;
+'Rationale: Use optimal venues and dates to fix matches so as to avoid sudden changes in weather resulting in implementation of D/L method '
+;
 
 footnote1
 'Based on the data,the team can change its strategy to meet the new target(runs and overs considered) by changing its lineup.';
