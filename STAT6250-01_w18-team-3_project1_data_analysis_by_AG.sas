@@ -49,7 +49,17 @@ proc print
 run;
 title;
 footnote;
+*
+Methodology: Use PROC PRINT to print out the first twenty observations
+from the sorted home runs temporary dataset created in the data prep file. 
+top 20 winner .
 
+Limitations: None
+
+Possible Follow-up Steps: Use PROC MEANS to compute the top 20 winner
+for the data set and see just how far above this  the best 20 teams. 
+
+;
 
 
 title1
