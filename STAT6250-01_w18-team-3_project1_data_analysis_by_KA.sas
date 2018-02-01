@@ -58,6 +58,7 @@ proc print
         match_id
     ;
     var
+        innings1
         innings1_runs
     ;
 run;
@@ -67,7 +68,7 @@ footnote;
 
 
 title1
-    'Research Question: What are win/lose statistics for teams batting/bowling first? ';
+    'Research Question: What are win/lose statistics for teams batting first? ';
     
 title2  
     'Rationale: This can help decide the win/loss rate of a team and decide their rankings.';
@@ -94,15 +95,18 @@ over their career.
 Possible Follow-up Steps: Check up with players from teams on their career background
 and their present statistics to predict an estimate of match outcome.
 ;
-proc means
-        min q1 median q3 max
+proc 
+
         data=T20_Matches_analytic_file_temp(obs=20)
     ;
     class
         match_details
     ;
     var
+        innings1
+        innings2
         winner
+        innings1_runs
     ;
 run;
 title;
@@ -114,8 +118,7 @@ title1
     'Research Question: How many matches were improvised by D/L method (target runs is reduced due to weather and time factors)?';
      
 title2 
-    'Rationale: Use optimal venues and dates to fix matches so as to avoid sudden changes in weather 
-     resulting in implementation of D/L method ';
+    'Rationale: Use optimal venues and dates to fix matches so as to avoid sudden changes in weather resulting in implementation of D/L method ';
 
 footnote1
 "Based on the above output, there's no clear inferential pattern for predicting the percentage eligible for free/reduced-price meals under the National School Lunch Program based on school enrollment since cell counts don't tend to follow trends for increasing or decreasing consistently."
