@@ -4,8 +4,9 @@
 *******************************************************************************;
 
 *
-This file uses the following analytic data set to address several research questions 
-regarding T20 matches in the Sport of Cricket, specifically in the years 2003-2017.
+This file uses the following analytic data set to address several research 
+questions regarding T20 matches in the Sport of Cricket, specifically in the 
+years 2003-2017.
 
 Data set name: T20 matches created in external file
 STAT6250-01_team-3_project1_data_preparation.sas, which is assumed to be 
