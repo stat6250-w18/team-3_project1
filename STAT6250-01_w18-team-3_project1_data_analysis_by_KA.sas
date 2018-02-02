@@ -155,16 +155,16 @@ inferential statistical technique like regression or forecasting if
 all the variables are provided for the calculation.
 ;
 proc print
-        data=Matches_raw
+
+       data=Matches_raw
     ;
-  id 
-  match_id
-  ;
-  var
-  ;
+    id
+        match_id
+    ;
+    var
     
-    innings1_overs
-    innings2_overs
+        innings1_overs
+        innings2_overs
         
     ;
 run;
