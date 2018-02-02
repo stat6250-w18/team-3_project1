@@ -58,7 +58,7 @@ every match, and then determine the possible highest score.
 ;
 proc print
         noobs
-        data=T20_Matches_analytic_file_temp(obs=20)
+        data=Matches_raw(obs=20)
     ;
     id
         match_id
@@ -107,10 +107,10 @@ outcome.
 ;
 proc print
 
-        data=T20_Matches_analytic_file_temp
+        data=Matches_raw
     ;
-    class
-        match_details
+    id
+        match_id
     ;
     var
         innings1
@@ -155,13 +155,17 @@ inferential statistical technique like regression or forecasting if
 all the variables are provided for the calculation.
 ;
 proc print
-        data=T20_Matches_analytic_file_temp
+        data=Matches_raw
     ;
-    table
-        innings1_overs
-        innings2_overs
-        D/L_method
-        target
+  id 
+  match_id
+  ;
+  var
+  ;
+    
+    innings1_overs
+    innings2_overs
+        
     ;
 run;
 title;
