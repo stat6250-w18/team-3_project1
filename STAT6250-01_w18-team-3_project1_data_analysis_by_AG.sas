@@ -24,6 +24,17 @@ X "cd ""%substr(%sysget(SAS_EXECFILEPATH),1,%eval(%length(%sysget(SAS_EXECFILEPA
 ** load external file that generates analytic dataset;
 %include '.\STAT6250-01_w18-team-3_project1_data_preparation.sas'; 
 
+*
+Methodology: Use PROC PRINT to print out the top twenty winner observations
+from the sorted home runs temporary dataset created in the data prep file. 
+top 20 winner .
+
+Limitations: None
+
+Possible Follow-up Steps: Use PROC MEANS to compute the top 20 winner
+for the data set and see just how far above this  the best 20 teams. 
+
+;
 
 title1
 'Research Question: who are the top twenty teams winner?'
@@ -49,17 +60,6 @@ proc print
 run;
 title;
 footnote;
-*
-Methodology: Use PROC PRINT to print out the top twenty winner observations
-from the sorted home runs temporary dataset created in the data prep file. 
-top 20 winner .
-
-Limitations: None
-
-Possible Follow-up Steps: Use PROC MEANS to compute the top 20 winner
-for the data set and see just how far above this  the best 20 teams. 
-
-;
 
 
 title1
