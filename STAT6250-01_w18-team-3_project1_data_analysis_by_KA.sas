@@ -58,7 +58,7 @@ every match, and then determine the possible highest score.
 ;
 proc print
         noobs
-        data=Matches_raw(obs=20)
+        data=matches_analytic_file(obs=20)
     ;
     id
         match_id
@@ -107,7 +107,7 @@ outcome.
 ;
 proc print
 
-        data=Matches_raw
+        data=matches_analytic_file
     ;
     id
         match_id
@@ -156,7 +156,7 @@ all the variables are provided for the calculation.
 ;
 proc print
 
-       data=Matches_raw
+       data=matches_analytic_file
     ;
     id
         match_id
