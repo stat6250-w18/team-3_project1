@@ -66,6 +66,8 @@ proc print
     var
         innings1
         innings1_runs
+        innings2
+        innings2_runs
     ;
 run;
 title;
