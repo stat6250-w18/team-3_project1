@@ -49,18 +49,10 @@ footnote1
 
 proc print
         noobs
-        data = Matches_raw (obs=20)
-    ;
-        match_id
-     ;
-     
-     var
-          winner
-    ;
+        data=sort_winner(obs=20);
 run;
 title;
 footnote;
-
 
 title1
 'Research Question: Who are the top 20 win by runs  with the highest number of home win?'
@@ -92,7 +84,7 @@ are.
 
 proc print 
         noobs 
-        data = Matches_raw
+        data = Matches_raw (obs=20);
     ;
     id 
         match_ID
@@ -146,7 +138,7 @@ category using PROC SORT.
 
 proc print 
         noobs 
-        data= Matches_raw 
+        data= Matches_raw (obs=20);
     ;
     id 
         match_ID
