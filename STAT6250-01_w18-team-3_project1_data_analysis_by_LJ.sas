@@ -107,11 +107,11 @@ to simplify the code;
 
 * merge the 3rd table (winner) into the merged one from home and away;
 proc sql;
-     create table match_info as
-     select     L.*, R.*
-     from home_away L
-     join  new_sort_winner R
-     on L.team=R.team;
+    create table match_info as
+    select     L.*, R.*
+    from home_away L
+    join  new_sort_winner R
+    on L.team=R.team;
 quit;
 data question3; set match_info;
     winning_rate=winner / total_match;
