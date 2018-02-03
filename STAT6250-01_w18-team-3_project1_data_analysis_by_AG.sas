@@ -59,6 +59,7 @@ proc print
           winner
     ;
 run;
+
 title;
 footnote;
 
@@ -103,6 +104,7 @@ proc print
         home win_by_runs
     ;
 run;
+
 title;
 footnote;
 
@@ -157,6 +159,7 @@ proc print
         innings1 win_by_runs
     ;
 run;
+
 title;
 footnote;
 
@@ -198,5 +201,6 @@ proc print
         winner away
     ;
 run;
+
 title;
 footnote;
