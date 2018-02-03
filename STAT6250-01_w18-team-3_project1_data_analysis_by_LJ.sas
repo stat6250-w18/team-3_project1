@@ -80,7 +80,7 @@ title2
 'Rationale: Find out which team has the highest probability of winning.';
     
 footnote1
-"Based on the result, Peshawar Region, Zarai Taraqiati, Lahore Lions are the top 3 teams with highest winning rate.";
+"Based on the result, Peshawar Region has the highest winning rate.";
 
 *
 Methodology: Use PROC SQL to merge the data and created a new dataset with 
