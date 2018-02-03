@@ -60,9 +60,6 @@ proc print
         noobs
         data=matches_raw(obs=20)
     ;
-    by  
-    	ascending innings1_runs
-    ;
     id
         match_id
     ;
