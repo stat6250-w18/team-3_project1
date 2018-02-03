@@ -168,6 +168,7 @@ proc print
         innings2_runs
         innings1_overs
         innings2_overs
+        D/L_method
         winner
     ;
 run;
