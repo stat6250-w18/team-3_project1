@@ -58,7 +58,7 @@ every match, and then determine the possible highest score.
 ;
 proc print
         noobs
-        data=Matches_raw(obs=20)
+        data=matches_raw(obs=20)
     ;
     id
         match_id
@@ -66,6 +66,8 @@ proc print
     var
         innings1
         innings1_runs
+        innings2
+        innings2_runs
     ;
 run;
 title;
@@ -107,7 +109,7 @@ outcome.
 ;
 proc print
 
-        data=Matches_raw
+        data=matches_raw
     ;
     id
         match_id
@@ -156,16 +158,20 @@ all the variables are provided for the calculation.
 ;
 proc print
 
-       data=Matches_raw
+       data=matches_raw
     ;
     id
         match_id
     ;
     var
-    
+        innings1
+        innings2
+        innings1_runs
+        innings2_runs
         innings1_overs
         innings2_overs
-        
+        D/L_method
+        winner
     ;
 run;
 title;
