@@ -49,7 +49,7 @@ footnote1
 
 proc print
         noobs
-        data =matches_analytic_file (obs=20)
+        data = matches_analytic_file; (obs=20)
     ;
     id
         match_id
@@ -94,7 +94,7 @@ are.
 
 proc print 
         noobs 
-        data = matches_analytic_file
+        data = matches_analytic_file;
     ;
     id 
         match_ID
@@ -148,7 +148,7 @@ category using PROC SORT.
 
 proc print 
         noobs 
-        data= matches_analytic_file
+        data= matches_analytic_file;
     ;
     id 
         match_ID
@@ -189,7 +189,7 @@ Possible Follow-up Steps: Compare the top twenty teams win ousaid home;
 
 proc print 
         noobs 
-        data=  matches_analytic_file (obs=20)
+        data= matches_analytic_file;  (obs=20)
     ;
     id 
         match_ID
