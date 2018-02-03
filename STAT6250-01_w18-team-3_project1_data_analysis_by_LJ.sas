@@ -40,13 +40,9 @@ Possible Follow-up Steps: We need to look into the winning rate.
 That is the winning matches / total matches attended. More carefully clean the
 values.
 ;
-
-proc freq data=match;
-tables winner / out=sort_winner;
-run;
-
-proc sort data=sort_winner;
-    by descending count;
+proc print
+        noobs
+        data=sort_winner(obs=5);
 run;
 title;
 footnote;
@@ -70,13 +66,6 @@ Limitations: This methodology overlooked the missing data.
 
 Possible Follow-up Steps: We need to omit missing values before analyzing;
 
-data question2; set match;
-    if winner = home then
-    home_win = 'Y';
-    else 
-    home_win="N";
-    keep home away winner home_win;
-run;
 proc freq data=question2;
     table home_win / nopercent nocum;
 run;
@@ -105,19 +94,12 @@ are abandoned.
 Possible Follow-up Steps: There are easier ways to get to the result, try 
 to simplify the code;
 
-* merge the 3rd table (winner) into the merged one from home and away;
-proc sql;
-    create table match_info as
-    select     L.*, R.*
-    from home_away L
-    join  new_sort_winner R
-    on L.team=R.team;
-quit;
-data question3; set match_info;
-    winning_rate=winner / total_match;
-run;
-proc sort data=question3;
-    by descending winning_rate;
+proc print noobs
+    data=question3(obs=5);
 run;
 title;    
 footnote;
+
+
+
+
