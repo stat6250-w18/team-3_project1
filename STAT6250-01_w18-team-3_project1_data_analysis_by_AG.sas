@@ -49,7 +49,7 @@ footnote1
 
 proc print
         noobs
-        data = Matches_raw (obs=20)
+        data = matches_analytics_file (obs=20)
     ;
         match_id
      ;
@@ -90,9 +90,10 @@ for the data set and see just how far above this average the best win by runs
 are.
 ;
 
+
 proc print 
         noobs 
-        data = Matches_raw
+        data = matches_analytics_file
     ;
     id 
         match_ID
@@ -146,7 +147,7 @@ category using PROC SORT.
 
 proc print 
         noobs 
-        data= Matches_raw 
+        data= matches_analytics_file
     ;
     id 
         match_ID
@@ -187,7 +188,7 @@ Possible Follow-up Steps: Compare the top twenty teams win ousaid home;
 
 proc print 
         noobs 
-        data=  Matches_raw (obs=20)
+        data=  matches_analytics_file (obs=20)
     ;
     id 
         match_ID
