@@ -162,10 +162,13 @@ proc print
         match_id
     ;
     var
-    
+        innings1
+        innings2
+        innings1_runs
+        innings2_runs
         innings1_overs
         innings2_overs
-        
+        winner
     ;
 run;
 title;
