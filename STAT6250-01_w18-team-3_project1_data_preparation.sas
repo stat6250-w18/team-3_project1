@@ -84,12 +84,14 @@ data matches_analytic_file;
         away
         winner
         win_by_run
+        inning1
     ;
     keep
         home
         away
         winner
         win_by_run
+        inning1
     ;
     set matches_raw;
 run;
