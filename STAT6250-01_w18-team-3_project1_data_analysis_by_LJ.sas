@@ -19,13 +19,13 @@ See included file for dataset properties
 %include '.\STAT6250-01_w18-team-3_project1_data_preparation.sas';
 
 title1 
-'Research Question: Which 5 teams have the most winning games?';
+'Research Question: Which 3 teams have the most winning games?';
     
 title2 
 'Rationale: Find out the teams good at winning games.';
     
 footnote1
-'Based on the above output, Chennai Super Ki, Mumbai Indians, Lancashire, Hampshire, Warwickshire are the top 5 teams at winning games';
+'Based on the above output, Chennai Super Ki, Mumbai Indians, Lancashire are the top 3 teams at winning games';
 
 *
 Methodology: Use PROC FREQ to list out the frequencies of each team's winning
