@@ -61,27 +61,32 @@ footnote;
 
 data matches_raw_q1;
 set matches_raw;
-#innings_runs=sum(innings1_runs,innings2_runs);
 run;
+
 proc sort data=matches_raw_q1 out=matches_raw_i1_sorted;
     by descending innings1_runs;
 run;
+
 proc sort data=matches_raw_q1 out=matches_raw_i2_sorted;
     by descending innings2_runs;
 run;
+
 title"Winner as per Inning 1";
 proc print data=matches_raw_i1_sorted (obs=10);
     var
-        match_details 		winner 		innings1 			    innings1_runs ;
+        match_details 		
+	winner 		
+	innings1 			    
+	innings1_runs ;
            run;
 title;
 title"Winner as per Inning 2";
 proc print data=matches_raw_i2_sorted (obs=10);
     var
         match_details
-		winner
-				innings2
-	            innings2_runs
+	winner
+	innings2
+	innings2_runs
     ;
 run;
 title;
@@ -122,20 +127,7 @@ Possible Follow-up Steps: Check up with players from teams on their career
 background and their present statistics to predict an estimate of match 
 outcome.
 ;
-proc print
 
-        data=matches_raw
-    ;
-    id
-        match_id
-    ;
-    var
-        innings1
-        innings2
-        innings1_runs
-        winner
-    ;
-run;
 title;
 footnote;
 
@@ -146,13 +138,14 @@ if winner=innings2 then inning2_winner=1 ;else inning2_winner=0;
 run;
 
 proc print data=matches_raw_q2 ( obs=2);run;
-title"jsdfnksjf";
+title"Teams who played first innings and won";
+
 proc sql;
 select count(inning1_winner) as Count1 
 from matches_raw_q2 where inning1_winner=1;
 quit;
 title;
-title"jsdfnksjf";
+title"Teams who played first innings and won";
 proc sql;
 select count(inning2_winner) as Count2 
 from matches_raw_q2 where inning2_winner=1;
@@ -189,25 +182,11 @@ Follow-up Steps: A possible follow-up to this approach could use an
 inferential statistical technique like regression or forecasting if 
 all the variables are provided for the calculation.
 ;
-proc print
+title;
+footnote;
 
-       data=matches_raw
-    ;
-    id
-        match_id
-    ;
-    var
-        innings1
-        innings2
-        innings1_runs
-        innings2_runs
-        innings1_overs
-        innings2_overs
-        D/L_method
-        winner
-    ;
-run;
-
+title;
+title"Number of matches improvised by D/L method";
 proc print data=matches_raw ( obs=2);run;
 proc sql;
 select count(*),D_L_method
