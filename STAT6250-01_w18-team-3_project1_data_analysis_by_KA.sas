@@ -96,7 +96,7 @@ title;
 
 
 title1 
-'Research Question: What are win/lose statistics for teams batting first? '
+'Research Question: What are win/lose statistics for teams batting in 1st and 2nd innings? '
 ;
     
 title2  
