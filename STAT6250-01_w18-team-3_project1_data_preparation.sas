@@ -7,8 +7,8 @@
 
 [Experimental Units] Over 6000 matches since 2003 
 
-[Number of Observations] 6,417      
-           
+[Number of Observations] 6,417
+
 [Number of Features] 26
 
 [Data Source] This data can be downloaded from Kaggle website.
@@ -102,7 +102,7 @@ run;
 * Use PROC FREQ and output a table with counts for winning matches of each team,
 and use PROC SORT to sort from most wins to least wins by teams;
 proc freq data=matches_analytic_file;
-tables winner / out=sort_winner;
+tables winner / out=sort_winner noprint;
 run;
 proc sort data=sort_winner;
     by descending count;
@@ -113,7 +113,7 @@ run;
 is being home/away, and use PROC SORT to sort from the most to least by teams,
 and created new dataset for each;
 proc freq data=matches_analytic_file;
-    tables home / out=sort_home;
+    tables home / out=sort_home noprint;
 run;
 
 proc sort data=sort_home;
@@ -122,7 +122,7 @@ run;
 
 
 proc freq data= matches_analytic_file;
-    tables away / out=sort_away;
+    tables away / out=sort_away noprint;
 run;
 
 
@@ -152,9 +152,10 @@ run;
 total_match which stands for the number of matches a team had in 2017;
 proc sql;
      create table total_match as
-     select     L.*, R.*
+     select L.team as home_team, L.home,
+            R.team as away_team, R.away
      from new_sort_home L
-     inner join  new_sort_away R
+     inner join new_sort_away R
      on L.team=R.team;
 quit;
 
@@ -170,10 +171,10 @@ run;
 in order to create a new variable called winning_rate;
 proc sql;
      create table match_info as
-     select     L.*, R.*
+     select L.*, R.*
      from home_away L
-     join  new_sort_winner R
-     on L.team=R.team;
+     join new_sort_winner R
+     on L.home_team=R.team;
 quit;
 data question3; set match_info;
     winning_rate=winner / total_match;
@@ -181,7 +182,10 @@ run;
 proc sort data=question3;
     by descending winning_rate;
 run;
-
+data question3_1;
+    set question3;
+    keep team percent winning_rate;
+run;
 
 * Use DATA Step to create a new dataset to produce a frequency table for each
 team of winning a match as home;
