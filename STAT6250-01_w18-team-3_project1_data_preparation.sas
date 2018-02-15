@@ -152,9 +152,10 @@ run;
 total_match which stands for the number of matches a team had in 2017;
 proc sql;
      create table total_match as
-     select     L.*, R.*
+     select L.team as home_team, L.home,
+            R.team as away_team, R.away
      from new_sort_home L
-     inner join  new_sort_away R
+     inner join new_sort_away R
      on L.team=R.team;
 quit;
 
@@ -170,10 +171,10 @@ run;
 in order to create a new variable called winning_rate;
 proc sql;
      create table match_info as
-     select     L.*, R.*
+     select L.*, R.*
      from home_away L
-     join  new_sort_winner R
-     on L.team=R.team;
+     join new_sort_winner R
+     on L.home_team=R.team;
 quit;
 data question3; set match_info;
     winning_rate=winner / total_match;
@@ -181,7 +182,10 @@ run;
 proc sort data=question3;
     by descending winning_rate;
 run;
-
+data question3_1;
+    set question3;
+    keep team percent winning_rate;
+run;
 
 * Use DATA Step to create a new dataset to produce a frequency table for each
 team of winning a match as home;
