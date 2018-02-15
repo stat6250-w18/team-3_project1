@@ -14,6 +14,10 @@ in the same directory as this file
 
 See included file for dataset properties
 ;
+* environmental setup;
+
+* set relative file import path to current directory (using standard SAS trick);
+X "cd ""%substr(%sysget(SAS_EXECFILEPATH),1,%eval(%length(%sysget(SAS_EXECFILEPATH))-%length(%sysget(SAS_EXECFILENAME))))""";
 
 * load external file that generates analytic dataset;
 %include '.\STAT6250-01_w18-team-3_project1_data_preparation.sas';
