@@ -102,7 +102,7 @@ run;
 * Use PROC FREQ and output a table with counts for winning matches of each team,
 and use PROC SORT to sort from most wins to least wins by teams;
 proc freq data=matches_analytic_file;
-tables winner / out=sort_winner;
+tables winner / out=sort_winner noprint;
 run;
 proc sort data=sort_winner;
     by descending count;
@@ -113,7 +113,7 @@ run;
 is being home/away, and use PROC SORT to sort from the most to least by teams,
 and created new dataset for each;
 proc freq data=matches_analytic_file;
-    tables home / out=sort_home;
+    tables home / out=sort_home noprint;
 run;
 
 proc sort data=sort_home;
@@ -122,7 +122,7 @@ run;
 
 
 proc freq data= matches_analytic_file;
-    tables away / out=sort_away;
+    tables away / out=sort_away noprint;
 run;
 
 
