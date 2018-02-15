@@ -7,8 +7,8 @@
 
 [Experimental Units] Over 6000 matches since 2003 
 
-[Number of Observations] 6,417      
-           
+[Number of Observations] 6,417
+
 [Number of Features] 26
 
 [Data Source] This data can be downloaded from Kaggle website.
