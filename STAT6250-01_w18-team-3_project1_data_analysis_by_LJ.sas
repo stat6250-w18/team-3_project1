@@ -31,6 +31,12 @@ title2
 footnote1
 'Based on the above output, Chennai Super Ki, Mumbai Indians, Lancashire are the top 3 teams at winning games';
 
+footnote2
+"However when we look at the first two records, we can see there are abandoned matches and missing data which can cause some potential problems for further study.";
+
+footnote3
+"Before we do more advanced data analysis, we need to tackle the issues first by clearning the data, such as inspecting if there is any anomaly in the data";
+
 *
 Methodology: Use PROC FREQ to list out the frequencies of each team's winning
 matches. And created a temporary data file called sort_winner.
@@ -58,7 +64,8 @@ title2
 'Rationale: Does home team have better performance?';
 
 footnote1
-"Based on the result, home teams are not at advantage winning against guest teams";
+"Based on the result, home teams are not at advantage winning against guest teams since they had fewer winning games";
+
 
 *
 Methodology: Use SET keyword to create a new data set and a new dummy variable
@@ -78,13 +85,19 @@ footnote;
 
 
 title1 
-'Research Question: Research Question: Which team has the highest winning rate? that is number of won matches / total number of matches.';
+'Research Question: Research Question: Which team has the highest winning rate?';
 
 title2 
 'Rationale: Find out which team has the highest probability of winning.';
     
 footnote1
 "Based on the result, Peshawar Region has the highest winning rate.";
+
+footnote2
+"Winning rate equal to the number of won matches / total number of matches.";
+
+footnote3
+"Karachi Region Blues will have the second highest winning rate place, and Sialkot Stallions will be the third, and so on. The underlying problem is some of the high winning rate team only attended a few games, we might need do some deeper research for that.";
 
 *
 Methodology: Use PROC SQL to merge the data and created a new dataset with 
@@ -99,7 +112,7 @@ Possible Follow-up Steps: There are easier ways to get to the result, try
 to simplify the code;
 
 proc print noobs
-    data=question3(obs=5);
+    data=question3_1(obs=5);
 run;
 title;    
 footnote;
