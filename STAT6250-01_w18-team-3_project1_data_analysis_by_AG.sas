@@ -109,15 +109,15 @@ title2
 ;
 
 footnote1
-' there are a good amount of team with higest innings1_wickets under 1000 with highest innings1_wickets averages.'
+' There is a good amount of teams with higest innings1_wickets under 1000 and highest innings1_wickets averages.'
 ;
 
 footnote2
-' on the other hand , I think that these are outliers and do not represent the best winner since all but one of the teams shown with innings1_wickets above 1000 are significantly above 1000,.'
+' On the other hand, I think that these are outliers and do not represent the winner since all but one of the teams shown with innings1_wickets above 1000 are significantly above 1000.'
 ;
 
 footnote3
-'I would say that the teams shown with low innings1_wickets did not get many winnes .'
+'I would say that the teams shown with low innings1_wickets did not get many winners.'
 ;
 
 footnote4
@@ -154,19 +154,19 @@ footnote;
 
 
 title1
-'Research Question: Who are the top 20 teams win away ?'
+'Research Question: Who are the top 20 teams who win on away matches ?'
 ;
 
 title2
-'Rationale: we can see how the team proform outside home.'
+'Rationale: We can see how the teams perform outside home.'
 ;
 
 footnote1
-'Sorting by this statistic shows a better correlation than between win and away .'
+'Sorting by this statistic determines the statistic between win and away and what are the chances of a team winning on an away match.'
 ;
 
 footnote2
-'Very few teams among the top 20  by win far away from home'
+'Very few teams among the top 20 by win far away from home, this is a proven statistic since teams do not get to play a many number of matches on away grounds.'
 ;
 *
 Methodology: Use PROC PRINT to print out the first twenty observations
