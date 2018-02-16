@@ -40,7 +40,7 @@ title1
 'Research Question: who are the top twenty teams winner?'
 ;
 
-title2:
+title2
 'Rationale : this would help us to plan a match amongst them to find out the the ultimate winner.'
 ;
 footnote1
