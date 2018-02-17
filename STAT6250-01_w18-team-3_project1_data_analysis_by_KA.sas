@@ -74,8 +74,10 @@ proc print data=matches_raw_i1_sorted (obs=10);
 	winner 		
 	innings1 			    
 	innings1_runs ;
-           run;
+run;
 title;
+footnote;
+
 title"Winner as per Inning 2";
 proc print data=matches_raw_i2_sorted (obs=10);
     var
@@ -86,7 +88,7 @@ proc print data=matches_raw_i2_sorted (obs=10);
     ;
 run;
 title;
-
+footnote;
 
 
 title1 
@@ -140,12 +142,15 @@ select count(inning1_winner) as Count1
 from matches_raw_q2 where inning1_winner=1;
 quit;
 title;
+footnote;
+
 title"Number of teams who played first innings and won";
 proc sql;
 select count(inning2_winner) as Count2 
 from matches_raw_q2 where inning2_winner=1;
 quit;
 title;
+footnote;
 
 title1 
 'Research Question: How many matches were improvised by D/L method?'
