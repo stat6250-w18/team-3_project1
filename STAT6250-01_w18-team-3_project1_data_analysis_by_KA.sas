@@ -66,7 +66,7 @@ proc sort data=matches_raw out=matches_raw_i2_sorted;
     by descending innings2_runs;
 run;
 
-title"Winner as per Inning 1";
+
 proc print data=matches_raw_i1_sorted (obs=10);
     var
         match_details 		
@@ -76,7 +76,7 @@ proc print data=matches_raw_i1_sorted (obs=10);
 run;
 
 
-title"Winner as per Inning 2";
+
 proc print data=matches_raw_i2_sorted (obs=10);
     var
         match_details
