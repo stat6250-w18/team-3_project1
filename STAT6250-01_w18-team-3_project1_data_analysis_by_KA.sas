@@ -56,8 +56,7 @@ lose the game.
 Possible Follow-up Steps: Take the average of scores of a team in each and 
 every match, and then determine the possible highest score.
 ;
-title;
-footnote;
+
 
 proc sort data=matches_raw out=matches_raw_i1_sorted;
     by descending innings1_runs;
@@ -75,8 +74,7 @@ proc print data=matches_raw_i1_sorted (obs=10);
 	innings1 			    
 	innings1_runs ;
 run;
-title;
-footnote;
+
 
 title"Winner as per Inning 2";
 proc print data=matches_raw_i2_sorted (obs=10);
