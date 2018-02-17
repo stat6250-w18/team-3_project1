@@ -37,11 +37,11 @@ for the data set and see just how far above this  the best 20 teams.
 ;
 
 title1
-'Research Question: who are the top twenty teams winner?'
+'Research Question: Who are the top twenty teams?'
 ;
 
-title2:
-'Rationale : this would help us to plan a match amongst them to find out the the ultimate winner.'
+title2
+'Rationale : This would help us to plan a tournament amongst them to find out the the winner. And also the 20 team statistics would help determine the strategy and statistics of playing the innings to achieve greater wins.'
 ;
 footnote1
 'This number will be used to help answer the following three research questions regarding the top twenty .'
@@ -55,19 +55,19 @@ title;
 footnote;
 
 title1
-'Research Question: Who are the top 20 win by runs  with the highest number of home win?'
+'Research Question: Who are the top twenty win by runs with the highest number of home win?'
 ;
 
 title2
-'Rationale: A home win by runs is a good and most impressive thing one can do in cricket , so more of these should increase the chance to be champions of cricke.'
+'Rationale: A home win by runs is a good and respectable in cricket, there is a slightly higher chance of winning since the team has already has played a lot and has experience of the pitch, so more games at home increase the chance of winning the matches.'
 ;
 
 footnote1
-'The average win by runs  for this dataset is 31.32071. While there are a couple outliers. The top twenty winner by win by runs numbers definitely have larger than any one . '
+'The average win by runs for this dataset is 31.32071. While there are a couple outliers.The top twenty winners margin of win by runs numbers is definitely larger than any one. '
 ;
 
 footnote2
-'This shows that if a team  can be skilled enough to win by win by runs, iy=t  has a great chance of bieng next champions of cricket  .'
+'This shows that if a team can be skilled enough to win by large margin of runs, iy=t has a great chance of being next champions of cricket  .'
 ;
 
 *
@@ -105,19 +105,19 @@ title1
 ;
 
 title2
-'Rationale: the  average is generally considered the premier stat for hitters, so the batters with the highest averages should have highst innings1_wickets  .'
+'Rationale: The average is generally considered the premier stat for hitters, so the batters with the highest averages should have highst innings1_wickets  .'
 ;
 
 footnote1
-' there are a good amount of team with higest innings1_wickets under 1000 with highest innings1_wickets  averages.'
+' There is a good amount of teams with higest innings1_wickets under 1000 and highest innings1_wickets averages.'
 ;
 
 footnote2
-' on oher hand , I think that these are outliers and do not represent the best winner since all but one of the teams shown with innings1_wickets above 1000 are significantly above 1000,.'
+' On the other hand, I think that these are outliers and do not represent the winner since all but one of the teams shown with innings1_wickets above 1000 are significantly above 1000.'
 ;
 
 footnote3
-'I would say that the teams  shown with low  innings1_wickets did not get many winnes .'
+'I would say that the teams shown with low innings1_wickets did not get many winners.'
 ;
 
 footnote4
@@ -154,19 +154,19 @@ footnote;
 
 
 title1
-'Research Question: Who are the top 20 teams win away ?'
+'Research Question: Who are the top 20 teams who win on away matches ?'
 ;
 
 title2
-'Rationale: we can see how the team proform outside home.'
+'Rationale: We can see how the teams perform outside home.'
 ;
 
 footnote1
-'Sorting by this statistic shows a better correlation than between win and away .'
+'Sorting by this statistic determines the statistic between win and away and what are the chances of a team winning on an away match.'
 ;
 
 footnote2
-'Very few teams among the top 20  by win far away from home'
+'Very few teams among the top 20 by win far away from home, this is a proven statistic since teams do not get to play a many number of matches on away grounds.'
 ;
 *
 Methodology: Use PROC PRINT to print out the first twenty observations
