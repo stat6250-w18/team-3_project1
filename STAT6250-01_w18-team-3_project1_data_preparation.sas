@@ -96,14 +96,14 @@ data matches_analytic_file;
     set matches_raw;
 run;
 
-#proc print data=matches_analytic_file (obs=5);
-#run;
+proc print data=matches_analytic_file (obs=5);
+run;
 
 * Use PROC FREQ and output a table with counts for winning matches of each team,
 and use PROC SORT to sort from most wins to least wins by teams;
-#proc freq data=matches_analytic_file;
-#tables winner / out=sort_winner noprint;
-#run;
+proc freq data=matches_analytic_file;
+tables winner / out=sort_winner noprint;
+run;
 proc sort data=sort_winner;
     by descending count;
 run;
