@@ -122,8 +122,6 @@ background and their present statistics to predict an estimate of match
 outcome.
 ;
 
-title;
-footnote;
 
 data matches_raw_q2;
 set matches_raw;
@@ -179,8 +177,7 @@ Follow-up Steps: A possible follow-up to this approach could use an
 inferential statistical technique like regression or forecasting if 
 all the variables are provided for the calculation.
 ;
-title;
-footnote;
+
 
 #proc print data=matches_raw (obs=2);
 #run;
