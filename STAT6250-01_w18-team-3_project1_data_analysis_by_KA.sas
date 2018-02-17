@@ -129,21 +129,18 @@ if winner=innings1 then inning1_winner=1 ;else inning1_winner=0;
 if winner=innings2 then inning2_winner=1 ;else inning2_winner=0;
 run;
 
-#proc print data=matches_raw_q2 ( obs=2);
-#run;
-
 
 proc sql;
-select count(inning1_winner) as Count1 
-from matches_raw_q2 where inning1_winner=1;
+	select count(inning1_winner) as Count1 
+	from matches_raw_q2 where inning1_winner=1;
 quit;
 
 
 proc sql;
-select count(inning2_winner) as Count2 
-from matches_raw_q2 where inning2_winner=1;
+	select count(inning2_winner) as Count2 
+	from matches_raw_q2 where inning2_winner=1;
 quit;
-run;
+
 title;
 footnote;
 
@@ -179,11 +176,9 @@ all the variables are provided for the calculation.
 ;
 
 
-#proc print data=matches_raw (obs=2);
-#run;
 proc sql;
-select count(*),D_L_method
-from matches_raw group by D_L_method;
+	select count(*),D_L_method
+	from matches_raw group by D_L_method;
 quit;
 
 run;
