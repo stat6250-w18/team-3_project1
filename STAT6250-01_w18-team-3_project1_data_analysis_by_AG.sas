@@ -55,7 +55,7 @@ title;
 footnote;
 
 title1
-'Research Question: Who are the top 20 win by runs with the highest number of home win?'
+'Research Question: Who are the top twenty win by runs with the highest number of home win?'
 ;
 
 title2
