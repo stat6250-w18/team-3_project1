@@ -133,16 +133,14 @@ run;
 
 #proc print data=matches_raw_q2 ( obs=2);
 #run;
-title"Number of teams who played first innings and won";
+
 
 proc sql;
 select count(inning1_winner) as Count1 
 from matches_raw_q2 where inning1_winner=1;
 quit;
-title;
-footnote;
 
-title"Number of teams who played first innings and won";
+
 proc sql;
 select count(inning2_winner) as Count2 
 from matches_raw_q2 where inning2_winner=1;
@@ -183,8 +181,6 @@ all the variables are provided for the calculation.
 title;
 footnote;
 
-title;
-title"Number of matches improvised by D/L method";
 #proc print data=matches_raw (obs=2);
 #run;
 proc sql;
