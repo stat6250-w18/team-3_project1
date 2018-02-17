@@ -185,6 +185,7 @@ proc sql;
 select count(*),D_L_method
 from matches_raw group by D_L_method;
 quit;
+
 run;
 title;
 footnote;
