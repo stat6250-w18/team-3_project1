@@ -85,9 +85,6 @@ proc print data=matches_raw_i2_sorted (obs=10);
 	innings2_runs
     ;
 run;
-
-title1;
-title2;
 title;
 footnote;
 
