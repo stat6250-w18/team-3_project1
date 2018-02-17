@@ -130,6 +130,11 @@ proc sort data=sort_away;
     by descending count;
 run;
 
+data matches_raw_q2;
+set matches_raw;
+if winner=innings1 then inning1_winner=1 ;else inning1_winner=0;
+if winner=innings2 then inning2_winner=1 ;else inning2_winner=0;
+run;
 
 /* Rename the three new created datasets, so that we have counts for each team
 that wins the game; being home team in a match; and being away in a match as a 
