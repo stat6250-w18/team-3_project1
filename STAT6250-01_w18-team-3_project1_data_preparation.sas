@@ -112,19 +112,19 @@ run;
 * Use PROC FREQ nd output a table with counts for the times of each team that 
 is being home/away, and use PROC SORT to sort from the most to least by teams,
 and created new dataset for each;
-/*proc freq data=matches_analytic_file;
+proc freq data=matches_analytic_file;
     tables home / out=sort_home noprint;
 run;
-*/
+
 proc sort data=sort_home;
     by descending count;
 run;
 
-/*
+
 proc freq data= matches_analytic_file;
     tables away / out=sort_away noprint;
 run;
-*/
+
 
 proc sort data=sort_away;
     by descending count;
