@@ -145,6 +145,7 @@ proc sql;
 select count(inning2_winner) as Count2 
 from matches_raw_q2 where inning2_winner=1;
 quit;
+run;
 title;
 footnote;
 
@@ -187,6 +188,6 @@ proc sql;
 select count(*),D_L_method
 from matches_raw group by D_L_method;
 quit;
-
+run;
 title;
 footnote;
