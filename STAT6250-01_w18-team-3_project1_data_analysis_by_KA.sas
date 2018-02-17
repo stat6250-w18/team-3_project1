@@ -123,11 +123,7 @@ outcome.
 ;
 
 
-data matches_raw_q2;
-set matches_raw;
-if winner=innings1 then inning1_winner=1 ;else inning1_winner=0;
-if winner=innings2 then inning2_winner=1 ;else inning2_winner=0;
-run;
+
 
 
 proc sql;
